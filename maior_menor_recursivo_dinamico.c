@@ -9,7 +9,6 @@ int min (int i, int *a) {
 	else {
 		x = min (i-1, a); 
 		if (x > *(a+i)) x = *(a+i);
-		printf("min=%d\n", x);
 	
 	}
 	return x;
@@ -35,9 +34,7 @@ int max (int i, int *a) {
 int main()
 {
 	
-	int maior, menor;
-	
-	int s, i, *a, c;
+	int maior, menor, *a, s, i;
 
 	printf("Quantos numeros serão introduzidos? \n");
 	scanf("%d", &s);
@@ -53,7 +50,7 @@ int main()
 	
 	for(i = 0; i < s; ++i)
 	{
-	printf("Digite o numero: ");
+	printf("Digite o %dº numero: ", i+1);
 		scanf("%d", a + i);
     }
     
